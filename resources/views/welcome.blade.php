@@ -27,7 +27,7 @@
         	</div>
 
         	<div class="col-12" align="right">
-        		<a href="#"><button class="btn btn-sm btn-success">Autoryzuj</button></a>
+        		<a href="https://allegro.pl.allegrosandbox.pl/auth/oauth/authorize?response_type=code&client_id=b72645917b28421390d22a8ecbfd4bd5&redirect_uri=http://127.0.0.1:8000&prompt=confirm"><button class="btn btn-sm btn-success">Autoryzuj</button></a>
         	</div>
 
         	<div class="col-12 mt-2">
