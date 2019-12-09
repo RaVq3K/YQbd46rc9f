@@ -10,6 +10,29 @@ Class AllegroRestApi{
 
     private $token = NULL;
 
+    /*
+    public static function Test(){
+        $kod = base64_encode('b72645917b28421390d22a8ecbfd4bd5:d9CIhugR0Jry2eH82fydflgpDOlwgasnq8uiiB4dh28K37s3IYq9YEP8aly6DvbX');
+
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://allegro.pl.allegrosandbox.pl/auth/oauth/token?grant_type=authorization_code&code='.$_GET['code'].'&redirect_uri='.self::redirectUri.'');
+        //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+
+        $headers = array();
+        $headers[] = 'Authorization: Basic '.$kod.'';
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        $result = curl_exec($ch);
+        dump($result);
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
+        }
+        curl_close($ch);
+    }
+    */
+
 //=====================[Pobieranie Klucza dostępowego]========================
     public static function GetAccessToken(){
         $ch = curl_init(self::authUrl);
@@ -104,7 +127,7 @@ Class AllegroRestApi{
         }           
     }
 //===============================================================================
-    
+
 //=============================[Setery i Getery]=================================
     public function SetToken($token){
         $this->token = $token;
